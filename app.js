@@ -15,6 +15,15 @@ const app = express();
 // helper db
 const db = require('./helper/db')();
 
+//config
+const config = require('./config');
+//global olarak heryerde kullanmak için
+app.set('api_secret_key' , config.api_secret_key);
+
+
+//middleware
+const verifyToken = require('./middleware/verifytoken');
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -32,6 +41,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+//artık verifyToken dan geçirilmeyen hiçbir şey
+//gösterilmeyecek
+app.use('/api/',verifyToken)
 app.use('/api/movies', movie);
 app.use('/api/directors', director);
 

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 
 //models
@@ -40,5 +41,54 @@ router.post('/register', (req, res, next) => {
   });
 
 
+router.post('/authenticate' , (req,res) => {
+  const {username , password} = req.body;
+
+  User.findOne({
+        username
+      }, (err,user) => {
+        if(err)
+          throw err;
+
+        if(!user){ //kullanıcı yoksa
+          res.json({
+            status: false,
+            message: 'Authentication failed , user not found'
+          });
+        }else{
+          //kullanıcı varsa elimdeki şifre ile
+          //veritabanı şifresini karşılaştıracağım
+          bcrypt.compare(password , user.password).then((result) => {
+            if(!result){ //şifre yanlışsa
+              res.json({
+                status: false,
+                message: 'Authentication failed , wrong password'
+              });
+            }else{ // şifre doğruysa
+
+              //payload oluştur
+              const payload = {
+                username
+              };
+              //token oluştur
+              const token = jwt.sign(payload, req.app.get('api_secret_key'), {
+                expiresIn: 720 //12 saat
+              });
+
+              res.json({
+                status: true,
+                token
+              })
+
+            }
+          });
+        }
+
+      });
+
+
+
+
+});
 
 module.exports = router;
