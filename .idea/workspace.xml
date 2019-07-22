@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c746f68e-00d1-4939-bd9b-ee1fa872945b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/routes/director.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/director.js" afterDir="false" />
-    </list>
+    <list default="true" id="c746f68e-00d1-4939-bd9b-ee1fa872945b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -118,7 +116,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
@@ -204,7 +202,7 @@
       <workItem from="1563568984345" duration="1514000" />
       <workItem from="1563575455719" duration="9433000" />
       <workItem from="1563648048366" duration="3372000" />
-      <workItem from="1563652901685" duration="16721000" />
+      <workItem from="1563652901685" duration="17321000" />
     </task>
     <task id="LOCAL-00001" summary="yönetmen join">
       <created>1563809911297</created>
@@ -217,11 +215,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32184000" />
+    <option name="totallyTimeSpent" value="32784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="0" width="781" height="830" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2715054" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
