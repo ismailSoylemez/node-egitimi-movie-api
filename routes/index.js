@@ -13,6 +13,9 @@ router.get('/', (req, res, next) => {
   res.render('index', { title: 'Express' });
 });
 
+
+// username ve password kaydı
+// passwordu hasledik
 router.post('/register', (req, res, next) => {
 
   const {username,password} = req.body;
@@ -44,6 +47,7 @@ router.post('/register', (req, res, next) => {
 router.post('/authenticate' , (req,res) => {
   const {username , password} = req.body;
 
+  // girilen username database de var mı kontrolü yapılıyor
   User.findOne({
         username
       }, (err,user) => {

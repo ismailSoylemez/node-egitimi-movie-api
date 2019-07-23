@@ -13,7 +13,7 @@ module.exports = (req, res, next) => {
             }else{
                 req.decode = decoded;
                 //console.log(decoded);
-                next();
+                next(); //bir sonraki routa geçer
             }
         });
     }else{
