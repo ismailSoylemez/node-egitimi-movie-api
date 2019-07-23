@@ -1,0 +1,25 @@
+unit testler yazarsak ufak parçaların kontrolü sağlanır
+
+neden kullanırız ?
+
+
+2 kişi projede çalışıyor x özelliği yazıldı.
+yarın geldin ve kod çalışmıyor değişmiş kod başkası değiştirmiş.
+birim testler yazarsak takım arkadaşın gelip bir değişiklik yaptığında yanlış bir şey yaparsa
+o testten geçemeyeceği için o değişikliği yapamayacak..
+
+bir kodu yazdın her şey yolunda ama kodda düzenlemeler yamak istiyorsun fakat korkuyorsun bozacağım diye.
+eğer unit test yazdıysan herhangi bir değişiklik yaptığında test sonuçları olumsuz gelirse değişiklikleri canlıya göndermeyeceksin.
+
+önce test kodları yazmak sonra fonk. yazmak daha profesyoneldir.
+
+
+test yazarken 2 modül kullanacağız
+1-mocha -> yazılan testlerin çalıştırılması
+2-chai -> assertion işlemlrti yapacağız
+
+ilk test kodumuz http://localhost:3000/ den 200 kodunun dönüp dönmemesine bakacak
+
+
+
+
