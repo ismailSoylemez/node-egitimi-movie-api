@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c746f68e-00d1-4939-bd9b-ee1fa872945b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -234,7 +233,7 @@
       <workItem from="1563648048366" duration="3372000" />
       <workItem from="1563652901685" duration="29877000" />
       <workItem from="1563914882162" duration="16166000" />
-      <workItem from="1564001322012" duration="1479000" />
+      <workItem from="1564001322012" duration="1561000" />
     </task>
     <task id="LOCAL-00001" summary="yönetmen join">
       <created>1563809911297</created>
@@ -265,7 +264,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62985000" />
+    <option name="totallyTimeSpent" value="63067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
