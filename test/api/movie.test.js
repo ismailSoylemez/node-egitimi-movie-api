@@ -27,7 +27,6 @@ describe('/api/Movies Tests', () => {
             });
     });
 
-
     describe('/GET movies' , () => {
        it('it should GET all the movies', (done) => {
            //tüm filmleri listeleyen yere istek yapmalıyım
@@ -43,7 +42,6 @@ describe('/api/Movies Tests', () => {
                });
        })
     });
-
 
     describe('/POST movie' , () => {
 
@@ -77,8 +75,7 @@ describe('/api/Movies Tests', () => {
         });
     });
 
-
-    describe('/GET/:director_id movie' , () => {
+    describe('/GET/:movie_id movie' , () => {
 
         it('it should GET a movie by the given id.', (done) => {
             chai.request(server)
@@ -98,7 +95,6 @@ describe('/api/Movies Tests', () => {
                 });
         });
     });
-
 
     describe('/PUT/:movie_id movie', () => {
         it('it should UPDATE a movie given by id', (done) => {
