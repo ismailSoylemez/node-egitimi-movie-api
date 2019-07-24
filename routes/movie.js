@@ -116,14 +116,14 @@ router.put('/:movie_id', (req,res,next) => {
         }
     );
 
-    promise.then((movie) => {
-        if(!movie)
+    promise.then((data) => {
+        if(!data)
             next({message:'The movie was not found.', code: 99});
-
-        res.json(movie);
+        res.json(data);
     }).catch((err) => {
         res.json(err);
     });
+
 });
 
 //Film Silme
