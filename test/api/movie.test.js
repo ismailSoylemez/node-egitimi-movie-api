@@ -7,13 +7,12 @@ chai.use(chaiHttp);
 
 
 
-let token;
+let token , movie_id;
 
 //tüm filmleri listeleyen servisin testi olacak
 //fakat öncelikle token olması lazım
 
-describe('/api/movies tests', () => {
-
+describe('/api/Movies Tests', () => {
 
     //tokenı alabilmek için testler başlamadan önce almamız gerekli
     // teste başlamadan önce işlem yapabilmek için
@@ -27,8 +26,6 @@ describe('/api/movies tests', () => {
                 done();
             });
     });
-
-
 
 
     describe('/GET movies' , () => {
@@ -45,6 +42,61 @@ describe('/api/movies tests', () => {
                    done();
                });
        })
+    });
+
+
+    describe('/POST movie' , () => {
+
+        const movie = {
+            title: 'udemy',
+            director_id: '5d34f32e4dead63ac0242e3b',
+            category: 'Komedi',
+            country: 'Türkiye',
+            year: 1950,
+            imdb_score: 8
+        };
+
+
+        it('it should POST a movie' , (done) => {
+            chai.request(server)
+                .post('/api/movies')
+                .send(movie)
+                .set('x-access-token', token)
+                .end((err, res) => {
+                    res.should.have.status(200);
+                    res.body.should.be.a('object');
+                    res.body.should.have.property('title');
+                    res.body.should.have.property('director_id');
+                    res.body.should.have.property('category');
+                    res.body.should.have.property('country');
+                    res.body.should.have.property('year');
+                    res.body.should.have.property('imdb_score');
+                    movie_id = res.body._id;
+                    done();
+                });
+        });
+    });
+
+
+    describe('/GET/:director_id movie' , () => {
+
+        it('it should GET a movie by the given id.', (done) => {
+            chai.request(server)
+                .get('/api/movies/'+movie_id)
+                .set('x-access-token',token)
+                .end((err,res) => {
+                    res.should.have.status(200);
+                    res.body.should.be.a('object');
+                    res.body.should.have.property('title');
+                    res.body.should.have.property('director_id');
+                    res.body.should.have.property('category');
+                    res.body.should.have.property('country');
+                    res.body.should.have.property('year');
+                    res.body.should.have.property('imdb_score');
+                    res.body.should.have.property('_id').eql(movie_id);
+                    done();
+                });
+        });
     });
 
 
