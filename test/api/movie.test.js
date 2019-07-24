@@ -99,39 +99,6 @@ describe('/api/Movies Tests', () => {
         });
     });
 
-/*
-    describe('/PUT/:director_id movie' , () => {
-
-        const movie = {
-            title: '93creative',
-            director_id: '5d34f32e4dead63ac0242e31',
-            category: 'Suç',
-            country: 'Fransa',
-            year: 1970,
-            imdb_score: 9
-        };
-
-
-        it('it should UPDATE a movie given by id' , (done) => {
-            chai.request(server)
-                .put('/api/movies/:'+movie_id)
-                .send(movie)
-                .set('x-access-token', token)
-                .end((err, res) => {
-                    res.should.have.status(200);
-                    res.body.should.be.a('object');
-                    res.body.should.have.property('title').eql(movie.title);
-                    res.body.should.have.property('director_id').eql(movie.director_id);
-                    res.body.should.have.property('category').eql(movie.category);
-                    res.body.should.have.property('country').eql(movie.country);
-                    res.body.should.have.property('year').eql(movie.year);
-                    res.body.should.have.property('imdb_score').eql(movie.imdb_score);
-                    done();
-                });
-        });
-    });
-
- */
 
     describe('/PUT/:movie_id movie', () => {
         it('it should UPDATE a movie given by id', (done) => {
@@ -162,6 +129,23 @@ describe('/api/Movies Tests', () => {
                 });
         });
     });
+
+    describe('/DELETE/:movie_id movie', () => {
+        it('it should DELETE a movie given by id', (done) => {
+
+
+            chai.request(server)
+                .delete('/api/movies/' + movie_id)
+                .set('x-access-token', token)
+                .end((err, res) => {
+                    res.should.have.status(200);
+                    res.body.should.be.a('object');
+                    res.body.should.have.property('status').eql(1);
+                    done();
+                });
+        });
+    });
+
 
 
 
