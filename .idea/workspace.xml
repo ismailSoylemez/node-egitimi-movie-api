@@ -108,7 +108,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="231" />
     <option name="y" value="-10" />
     <option name="width" value="970" />
@@ -234,7 +234,7 @@
       <workItem from="1563648048366" duration="3372000" />
       <workItem from="1563652901685" duration="29877000" />
       <workItem from="1563914882162" duration="16166000" />
-      <workItem from="1564001322012" duration="971000" />
+      <workItem from="1564001322012" duration="1479000" />
     </task>
     <task id="LOCAL-00001" summary="yönetmen join">
       <created>1563809911297</created>
@@ -265,10 +265,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62477000" />
+    <option name="totallyTimeSpent" value="62985000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10707204" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
