@@ -69,7 +69,6 @@ router.post('/authenticate' , (req,res) => {
                 message: 'Authentication failed , wrong password'
               });
             }else{ // şifre doğruysa
-
               //payload oluştur
               const payload = {
                 username
