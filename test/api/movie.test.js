@@ -6,7 +6,6 @@ const server = require('../../app');
 chai.use(chaiHttp);
 
 
-
 let token , movie_id;
 
 //tüm filmleri listeleyen servisin testi olacak
